@@ -300,7 +300,7 @@ class AuthSystem:
 
 def init_menu(auth_system):
     while True:
-        print("\n\n-- Institutional Management  ---")
+        print("\n--- Institutional Management  ---\n")
         print("1. Affiliated Workers Management")
         print("2. Institutional Performance Dashboard")
         print("3. Patient Appointments Overview")
