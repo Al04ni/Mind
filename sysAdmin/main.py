@@ -124,9 +124,8 @@ def sys_menu(auth_system):
         print()
         print("1. System Monitoring")
         print("2. Help Request")
-        print("3. Users")
-        print("4. Password Recovered")
-        print("5. Logout")
+        print("3. Password Recovered")
+        print("4. Logout")
         choice = input("Your choice >>> ")
 
         if choice == '1':
@@ -134,10 +133,8 @@ def sys_menu(auth_system):
         elif choice == '2':
             get_request(auth_system)
         elif choice == '3':
-            user()
-        elif choice == '4':
             recovered_menu(auth_system)
-        elif choice == '5':
+        elif choice == '4':
             print("Logging out....")
             break
         else:
@@ -146,10 +143,10 @@ def sys_menu(auth_system):
 
 if __name__ == "__main__":
     auth = AuthSystem(
-        host="localhost",
-        user="root",
-        password="school",
-        database="mindsafe"
+        host="your_host",
+        user="your_username",
+        password="your_password",
+        database="your_database"
     )
     sys_menu(auth)
 
