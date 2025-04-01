@@ -322,9 +322,9 @@ def init_menu(auth_system):
 
 if __name__ == "__main__":
     auth = AuthSystem(
-        host="localhost",
-        user="root",
-        password="school",
-        database="mindsafe"
+        host="your_host",
+        user="your_username",
+        password="your_password",
+        database="your_database"
     )
     init_menu(auth)
