@@ -67,12 +67,12 @@ def auth_menu(conn, user_type='patient'):
     auth = auth(conn)
     while True:
         print(Fore.CYAN + f"\n{user_type.title()} Authentication")
-        print(Fore.YELLOW + "1. Login")
+        print(Fore.YELLOW + "\n1. Login")
         print(Fore.YELLOW + "2. Sign Up")
         print(Fore.YELLOW + "3. Forgot Password")
         print(Fore.YELLOW + "4. Back")
         
-        choice = input(Fore.WHITE + "Choose option: ")
+        choice = input(Fore.WHITE + "\nChoose option: ")
 
         if choice == '1':
             user = handle_login(auth)

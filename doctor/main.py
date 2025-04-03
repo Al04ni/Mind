@@ -12,9 +12,9 @@ init(autoreset=True)  # Initialize Colorama
 def create_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="school",
-        database="mindsafe"
+        user="your_username",
+        password="password",
+        database="your_database"
     )
 class DoctorPortal:
     def __init__(self, doctor_data):
