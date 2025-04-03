@@ -418,8 +418,8 @@ def menu():
 if __name__ == "__main__":
     auth = AuthSystem(
         host="localhost",
-        user="root",
-        password="school",
-        database="mindsafe"
+        user="user_name",
+        password="your_password",
+        database="database"
     )
     menu()

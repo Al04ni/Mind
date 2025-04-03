@@ -12,9 +12,9 @@ init(autoreset=True)
 def create_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="school",
-        database="mindsafe"
+        user="user_name",
+        password="your_password",
+        database="database"
     )
 
 class BlogManager:
