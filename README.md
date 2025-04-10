@@ -83,7 +83,4 @@ The flow was the Affiliated worker's management, institutional performance, pati
   
 ### Setup 🧰
 
----
-## Screenshots:
-
 ## Contributions:
