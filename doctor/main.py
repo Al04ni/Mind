@@ -175,7 +175,7 @@ class DoctorPortal:
         try:
             cursor = self.conn.cursor(dictionary=True)
             cursor.execute("SELECT * FROM doctors WHERE doctor_id = %s", 
-                          (self.doctor['doctor_id'],))
+                        (self.doctor['doctor_id'],))
             profile = cursor.fetchone()
             
             print(Fore.CYAN + "\nYour Profile:")
