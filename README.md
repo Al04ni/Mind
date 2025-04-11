@@ -1,6 +1,9 @@
 <div align='center'> 
 <h1> MindSafe 🧠</h1>
 </div>
+
+<details> 
+<summary> About :smile:</summary>
 In many regions, mental health patients face significant barriers to accessing professional care, such as stigma, limited availability of mental health professionals, being judged, and a lack of anonymity. These obstacles can discourage patients from seeking the help they need, which may lead to untreated mental health conditions, a worsening of symptoms, and decreased quality of life. On the other hand, healthcare providers, particularly mental health professionals, may struggle to connect with patients who are reluctant to share their struggles due to fears of judgment or confidentiality concerns.
 
 ## Our Why
@@ -81,6 +84,6 @@ The flow was the Affiliated worker's management, institutional performance, pati
   
 - *Logout*: he/she will log out to the home without returning to the authentication logic.
   
-### Setup 🧰
+</details>
 
-## Contributions:
+### Setup 🧰
