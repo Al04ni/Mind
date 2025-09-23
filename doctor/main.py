@@ -84,8 +84,8 @@ class DoctorPortal:
 
             cursor = self.conn.cursor()
             query = """INSERT INTO doctor_sessions 
-                     (doctor_id, meet_link, start_time, end_time, gender)
-                     VALUES (%s, %s, %s, %s, %s)"""
+                    (doctor_id, meet_link, start_time, end_time, gender)
+                    VALUES (%s, %s, %s, %s, %s)"""
             cursor.execute(query, (
                 self.doctor['doctor_id'],
                 meet_link,
@@ -104,10 +104,10 @@ class DoctorPortal:
         try:
             cursor = self.conn.cursor(dictionary=True)
             query = """SELECT a.appointment_id, a.user_id, a.timestamp, 
-                      ds.meet_link, ds.start_time 
-                      FROM appointments a
-                      JOIN doctor_sessions ds ON a.session_id = ds.session_id
-                      WHERE ds.doctor_id = %s"""
+                    ds.meet_link, ds.start_time 
+                    FROM appointments a
+                    JOIN doctor_sessions ds ON a.session_id = ds.session_id
+                    WHERE ds.doctor_id = %s"""
             cursor.execute(query, (self.doctor['doctor_id'],))
             bookings = cursor.fetchall()
             
@@ -130,8 +130,8 @@ class DoctorPortal:
         try:
             cursor = self.conn.cursor(dictionary=True)
             query = """SELECT * FROM doctor_sessions 
-                     WHERE doctor_id = %s AND start_time > NOW()
-                     ORDER BY start_time LIMIT 5"""
+                    WHERE doctor_id = %s AND start_time > NOW()
+                    ORDER BY start_time LIMIT 5"""
             cursor.execute(query, (self.doctor['doctor_id'],))
             sessions = cursor.fetchall()
             
@@ -227,7 +227,7 @@ class DoctorPortal:
             content = input("Enter blog content: ")
             cursor = self.conn.cursor()
             query = """INSERT INTO blogs (doctor_id, content)
-                     VALUES (%s, %s)"""
+                    VALUES (%s, %s)"""
             cursor.execute(query, (self.doctor['doctor_id'], content))
             self.conn.commit()
             print(Fore.GREEN + "Blog post created successfully!")
@@ -243,7 +243,7 @@ class DoctorPortal:
             
             cursor = self.conn.cursor()
             query = """UPDATE blogs SET content = %s 
-                     WHERE blog_id = %s AND doctor_id = %s"""
+                    WHERE blog_id = %s AND doctor_id = %s"""
             cursor.execute(query, (new_content, blog_id, self.doctor['doctor_id']))
             self.conn.commit()
             
@@ -279,8 +279,8 @@ class DoctorPortal:
             try:
                 cursor = self.conn.cursor(dictionary=True)
                 query = """SELECT content FROM blogs 
-                         WHERE doctor_id = %s 
-                         ORDER BY created_at DESC LIMIT 1"""
+                        WHERE doctor_id = %s 
+                        ORDER BY created_at DESC LIMIT 1"""
                 cursor.execute(query, (self.doctor['doctor_id'],))
                 blog = cursor.fetchone()
                 
